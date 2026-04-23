@@ -961,6 +961,34 @@
     .modal-body a { color: var(--teal); }
 
     /* =============================================
+       BURGER MENU
+    ============================================= */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 110;
+    }
+
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* =============================================
        RESPONSIVE
     ============================================= */
     @media (max-width: 900px) {
@@ -975,12 +1003,56 @@
       .reg-grid { grid-template-columns: 1fr; }
       .expertise-grid { grid-template-columns: 1fr; }
 
-      .nav-links { display: none; }
+      /* Burger visible, liens cachés par défaut */
+      .nav-burger { display: flex; }
+      .nav-links   { display: none; }
+
+      /* Menu ouvert */
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(13,59,77,0.98);
+        backdrop-filter: blur(8px);
+        padding: 8px 24px 24px;
+        gap: 0;
+        border-bottom: 1px solid rgba(40,184,193,0.2);
+        z-index: 100;
+      }
+
+      .nav-links.open li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .nav-links.open li:last-child { border-bottom: none; }
+
+      .nav-links.open a {
+        display: block;
+        padding: 14px 0;
+        font-size: 16px;
+        color: rgba(255,255,255,0.85);
+      }
+
+      .nav-links.open .nav-cta {
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+        padding: 12px;
+        border-radius: 4px;
+        color: var(--white);
+      }
+
+      /* About section */
+      .about-photo img { max-height: 280px; width: 100%; object-fit: cover; border-radius: 8px; }
+
+      /* Stats : 1 colonne sur mobile */
+      .stats-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
       .hero { padding: 60px 0; }
       section { padding: 56px 0; }
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -998,6 +1070,9 @@
       <li><a href="#references">Références</a></li>
       <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
     </ul>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -1557,6 +1632,25 @@
 </div>
 
 <script>
+/* ── Burger menu ── */
+(function () {
+  var burger = document.querySelector('.nav-burger');
+  var links  = document.querySelector('.nav-links');
+  if (!burger || !links) return;
+  burger.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
 /* ── Parallax bandeau photo ── */
 (function () {
   var banner = document.querySelector('.photo-banner');
