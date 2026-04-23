@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tempodiag — Expert repérage amiante certifié NFX 46-102. Voirie, ouvrages d'art et génie civil. Intervention France entière. Conformité obligatoire au 1er juillet 2026.">
+  <title>Tempodiag : Repérage amiante NFX 46-102 | Voirie, enrobé routier et ouvrages d'art</title>
+  <link rel="icon" href="images/favicon-tempodiag.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================
+       VARIABLES & RESET
+    ============================================= */
+    :root {
+      --dark:    #0D3B4D;
+      --primary: #0E4F5E;
+      --teal:    #1EA1AE;
+      --light:   #28B8C1;
+      --white:   #FFFFFF;
+      --offwhite:#F4F8F9;
+      --grey:    #E8EEF0;
+      --text:    #1A2E35;
+      --muted:   #5A7580;
+      --border:  #C5D8DC;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =============================================
+       BADGES / TAGS
+    ============================================= */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(30, 161, 174, 0.12);
+      color: var(--teal);
+      border: 1px solid rgba(30, 161, 174, 0.3);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .badge .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: blink 1.4s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .section-tag {
+      font-family: 'Rubik', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 59, 77, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(40, 184, 193, 0.15);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Rubik', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--light); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--teal);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--light); }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 60%, #0F5E70 100%);
+      padding: 90px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(40,184,193,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span { color: var(--light); }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.72);
+      font-size: 17px;
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* Réassurance */
+    .reassurance-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ri-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(40,184,193,0.2);
+      border-left: 3px solid var(--teal);
+      border-radius: 6px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .ri-icon {
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .ri-title {
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+
+    .ri-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* =============================================
+       URGENCY BANNER
+    ============================================= */
+    .urgency {
+      background: var(--primary);
+      border-top: 1px solid rgba(40,184,193,0.15);
+      border-bottom: 1px solid rgba(40,184,193,0.15);
+      padding: 18px 0;
+    }
+
+    .urgency-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .urgency-text strong {
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .urgency-text span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* =============================================
+       SECTIONS COMMUNES
+    ============================================= */
+    section { padding: 80px 0; }
+
+    .section-header {
+      margin-bottom: 52px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 560px;
+    }
+
+    /* =============================================
+       À PROPOS
+    ============================================= */
+    .about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    /* Placeholder pour les textes manquants */
+    .placeholder-text {
+      background: var(--grey);
+      border-radius: 4px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--offwhite);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--teal);
+      border-radius: 6px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Rubik', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .stat-typewriter {
+      font-size: 28px;
+      letter-spacing: 0.06em;
+    }
+
+    .stat-typewriter::after {
+      content: '|';
+      display: inline-block;
+      color: var(--teal);
+      animation: blink-cursor 0.7s step-end infinite;
+      margin-left: 2px;
+    }
+
+    .stat-typewriter.done::after { display: none; }
+
+    @keyframes blink-cursor {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* =============================================
+       RÉGLEMENTATION
+    ============================================= */
+    .reglementation { background: var(--offwhite); }
+
+    .alert-box {
+      background: rgba(13, 59, 77, 0.06);
+      border: 1px solid rgba(13, 59, 77, 0.15);
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .alert-icon { font-size: 2.5em; flex-shrink: 0; align-self: center; line-height: 1; }
+
+    .alert-text strong {
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .alert-text span { font-size: 14px; color: var(--muted); }
+
+    .reg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .reg-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 24px;
+    }
+
+    .reg-num {
+      font-family: 'Rubik', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--grey);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .reg-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .reg-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       RÉFÉRENCES CLIENTS
+    ============================================= */
+    .references { background: var(--white); }
+
+    /* Carrousel logos */
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 48px;
+      padding: 8px 0;
+    }
+
+    .carousel-wrapper::before,
+    .carousel-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .carousel-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, var(--white) 30%, transparent);
+    }
+
+    .carousel-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, var(--white) 30%, transparent);
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 48px;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .carousel-wrapper:hover .carousel-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 150px;
+      flex-shrink: 0;
+    }
+
+    .logo-item img {
+      height: 140px;
+      width: 280px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.45);
+      transition: filter 0.3s;
+    }
+
+    .carousel-wrapper:hover .logo-item:hover img {
+      filter: grayscale(0%) opacity(1);
+    }
+
+    .logo-item-name {
+      font-family: 'Rubik', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .partners-block h3 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .partners-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .partner-logo-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .partner-logo-link:hover {
+      border-color: var(--teal);
+      box-shadow: 0 2px 10px rgba(30,161,174,0.1);
+    }
+
+    .partner-logo-link img {
+      height: 36px;
+      width: 120px;
+      object-fit: contain;
+    }
+
+    /* =============================================
+       BANDEAU ENGAGEMENTS
+    ============================================= */
+    .engagements {
+      background: var(--dark);
+      padding: 52px 0;
+    }
+
+    .eng-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .eng-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px 28px;
+      border-right: 1px solid rgba(40,184,193,0.12);
+    }
+
+    .eng-item:last-child { border-right: none; }
+
+    .eng-icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .eng-title {
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .eng-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 220px;
+    }
+
+    @media (max-width: 900px) {
+      .eng-grid { grid-template-columns: 1fr; gap: 0; }
+      .eng-item { border-right: none; border-bottom: 1px solid rgba(40,184,193,0.12); }
+      .eng-item:last-child { border-bottom: none; }
+    }
+
+    /* =============================================
+       EXPERTISE / CAS CONCRETS
+    ============================================= */
+    .expertise { background: var(--offwhite); }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .exp-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .exp-card:hover {
+      box-shadow: 0 8px 24px rgba(13,59,77,0.1);
+    }
+
+    .exp-head {
+      background: var(--primary);
+      padding: 18px 22px;
+    }
+
+    .exp-type {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .exp-title {
+      font-family: 'Rubik', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .exp-body { padding: 20px 22px; }
+
+    .exp-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .exp-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .exp-tag {
+      background: rgba(30,161,174,0.1);
+      color: var(--teal);
+      border: 1px solid rgba(30,161,174,0.2);
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* =============================================
+       CTA / FORMULAIRE
+    ============================================= */
+    .cta-section {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    }
+
+    .cta-section .section-tag { color: var(--light); }
+
+    .cta-section h2 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .cta-section > .container > p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      margin-bottom: 48px;
+    }
+
+    /* Calendly bloc */
+    .calendly-block {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .calendly-block h3 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .calendly-block p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 28px;
+    }
+
+    .calendly-placeholder {
+      background: rgba(255,255,255,0.05);
+      border: 2px dashed rgba(40,184,193,0.3);
+      border-radius: 8px;
+      padding: 60px 24px;
+      text-align: center;
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(40,184,193,0.1);
+      padding: 36px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Rubik', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--light); }
+
+    .footer-info {
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+    }
+
+    .footer-legal {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      text-align: right;
+    }
+
+    .footer-legal a { color: rgba(255,255,255,0.4); }
+    .footer-legal a:hover { color: var(--light); }
+
+    /* =============================================
+       IMAGES & ICÔNES
+    ============================================= */
+
+    .img-ph {
+      background: var(--grey);
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-style: italic;
+      text-align: center;
+      padding: 16px;
+    }
+    .img-ph .phi { font-size: 34px; opacity: 0.35; display: block; margin-bottom: 4px; }
+
+    .about-photo { border-radius: 8px; overflow: hidden; margin-bottom: 24px; }
+    .about-photo img, .about-photo .img-ph { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .about-photo .img-ph { border-radius: 8px; }
+
+    .stat-icon { width: 80px; height: 80px; object-fit: contain; margin: 0 auto 10px; display: block; }
+
+    .reg-icon { width: 80px; height: 80px; object-fit: contain; display: block; margin-bottom: 16px; }
+
+    .photo-banner { position: relative; overflow: hidden; height: 400px; }
+    .photo-banner img { position: absolute; top: 0; left: 0; width: 100%; height: 130%; object-fit: cover; display: block; will-change: transform; }
+    .photo-banner .img-ph { height: 400px; border-radius: 0; border-left: none; border-right: none; }
+    .photo-banner::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(13,59,77,0.6) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .exp-img-wrap { overflow: hidden; }
+    .exp-img-wrap img { width: 100%; height: 150px; object-fit: cover; display: block; transition: transform 0.3s; }
+    .exp-card:hover .exp-img-wrap img { transform: scale(1.04); }
+    .exp-img-wrap .img-ph { height: 150px; border-radius: 0; border: none; border-bottom: 2px dashed var(--border); }
+
+    .client-logo-real { width: 80px; height: 50px; object-fit: contain; filter: grayscale(80%); opacity: 0.65; transition: all 0.2s; }
+    .client-card:hover .client-logo-real { filter: grayscale(0%); opacity: 1; }
+
+    .cta-photo { border-radius: 8px; overflow: hidden; margin-top: 28px; }
+    .cta-photo img { width: 100%; height: 150px; object-fit: cover; opacity: 0.55; display: block; }
+    .cta-photo .img-ph { height: 150px; border-color: rgba(40,184,193,0.22); background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.3); }
+
+    /* =============================================
+       MODALE MENTIONS LÉGALES
+    ============================================= */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 59, 77, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay.is-open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--white);
+      border-radius: 10px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 60px rgba(13,59,77,0.3);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .modal-header h2 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      color: var(--muted);
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .modal-close:hover {
+      background: var(--grey);
+      color: var(--dark);
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      padding: 28px 28px 32px;
+      flex: 1;
+    }
+
+    .modal-body h3 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 24px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-body h3:first-child { margin-top: 0; }
+
+    .modal-body p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .modal-body a { color: var(--teal); }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .cta-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .hero h1 { font-size: 34px; }
+      .section-header h2 { font-size: 28px; }
+      .cta-section h2 { font-size: 28px; }
+
+      .reg-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
+
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 60px 0; }
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =============================================
+     NAVIGATION
+============================================= -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo"><img src="images/logo-tempodiag.png" alt="Tempodiag" style="height:40px;display:block;"></a>
+    <ul class="nav-links">
+      <li><a href="#about">Notre expertise</a></li>
+      <li><a href="#reglementation">La réglementation</a></li>
+      <li><a href="#references">Références</a></li>
+      <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- =============================================
+     HERO
+============================================= -->
+<section class="hero" style="position:relative;">
+  <!-- IMAGE HERO BG -->
+  <img src="images/ponts-voiries-diagnostic-amiante-npx-46-102.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.10;pointer-events:none;">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div>
+        <div class="badge">
+          <span class="dot"></span>
+          Obligation au 1er juillet 2026
+        </div>
+
+        <!-- PLACEHOLDER TITRE -->
+        <h1>
+          <!-- À REMPLACER : Titre principal accrocheur -->
+          Repérage amiante <span><br>NFX 46-102</span><br>
+          Voirie, ouvrages d'art,<br>enrobé routier et génie civil<br>HAP HCT
+        </h1>
+
+        <!-- PLACEHOLDER DESCRIPTION -->
+        <p class="hero-sub">
+          Vos chantiers de voirie, d’enrobés routiers, de génie civil ou sur ouvrages d'art nécessitent désormais un repérage amiante conforme à la norme NFX 46-102. Nos opérateurs sont certifiés.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            📅 PLANIFIER UN RDV VISIO
+          </a>
+          <a href="#reglementation" class="btn btn-outline">
+            EN SAVOIR PLUS
+          </a>
+        </div>
+        <p class="hero-note">Étude de faisabilité de marché</p>
+      </div>
+
+      <!-- RÉASSURANCE -->
+      <div class="reassurance-stack">
+
+        <!-- RÉASSURANCE 1 — À ADAPTER -->
+        <div class="ri-card">
+          <div class="ri-icon">✅</div>
+          <div>
+            <div class="ri-title">Opérateurs certifiés NFX 46-102</div>
+            </div>
+        </div>
+
+        <!-- RÉASSURANCE 2 -->
+        <div class="ri-card">
+          <div class="ri-icon">✅</div>
+          <div>
+            <div class="ri-title">Intervention adaptable à des interventions d’urgence</div>
+          </div>
+        </div>
+
+        <!-- RÉASSURANCE 3 -->
+        <div class="ri-card">
+          <div class="ri-icon">✅</div>
+          <div>
+            <div class="ri-title">Rapports conformes à la nouvelle norme</div>
+          </div>
+        </div>
+
+        <!-- RÉASSURANCE 4 -->
+        <div class="ri-card">
+          <div class="ri-icon">✅</div>
+          <div>
+            <div class="ri-title">Missions courtes avec réactivité garantie</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     URGENCE RÉGLEMENTAIRE
+============================================= -->
+<div class="urgency">
+  <div class="container urgency-inner">
+    <div class="urgency-text">
+      <strong>IL RESTE MOINS DE 3 MOIS AVANT L'ENTRÉE EN VIGUEUR DE L'OBLIGATION AU 1er JUILLET 2026</strong>
+      <span>Les chantiers programmés pour le second semestre 2026 nécessitent un opérateur certifié dès maintenant.</span>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     À PROPOS
+============================================= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Qui sommes-nous</div>
+      <h2>Tempodiag, spécialiste du repérage amiante en génie civil</h2>
+    </div>
+    <div class="about-grid">
+
+      <div>
+        <!-- PHOTO ÉQUIPE / TERRAIN -->
+        <div class="about-photo"><img src="images/travaux-voiries-diagnostic-amiante-npx-46-102.webp" alt="Équipe Tempodiag sur chantier voirie"></div>
+        <div class="about-text">
+        <!-- PLACEHOLDERS TEXTES — À REMPLACER PAR LES VRAIS CONTENUS -->
+        <div class="placeholder-text">
+          📝 [Paragraphe 1 — Présenter l'entreprise : date de création, historique, positionnement, équipe]
+        </div>
+        <div class="placeholder-text">
+          📝 [Paragraphe 2 — Expertise spécifique sur la voirie et les ouvrages d'art : types d'ouvrages traités, méthodologie, différenciateurs]
+        </div>
+        <div class="placeholder-text">
+          📝 [Paragraphe 3 — Message fort sur la certification NFX 46-102 et ce qu'elle garantit pour les clients]
+        </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <!-- CHIFFRES CLÉS — À REMPLACER -->
+        <div class="stat-card">
+          <img src="images/icone-pont.webp" alt="" class="stat-icon">
+          <span class="stat-num">80</span>
+          <div class="stat-label">ouvrages d'art repérés</div>
+        </div>
+        <div class="stat-card">
+          <img src="images/icone-calendrier.webp" alt="" class="stat-icon">
+          <span class="stat-num">7</span>
+          <div class="stat-label">Années d'expérience</div>
+        </div>
+        <div class="stat-card">
+          <img src="images/icone-route.webp" alt="" class="stat-icon">
+          <span class="stat-num stat-typewriter">CENTAINES</span>
+          <div class="stat-label">de km d'enrobés analysés</div>
+        </div>
+        <div class="stat-card">
+          <img src="images/icone-rapport.webp" alt="" class="stat-icon">
+          <span class="stat-num">100%</span>
+          <div class="stat-label">Rapports conformes <span style="white-space:nowrap">NFX 46-102</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     RÉGLEMENTATION
+============================================= -->
+<section class="reglementation" id="reglementation">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">La réglementation</div>
+      <h2>Pourquoi faire appel à un opérateur certifié ?</h2>
+      <p>Depuis l'arrêté du 4 juin 2024, tout repérage amiante sur les ouvrages de génie civil est encadré par la norme NFX 46-102. Au 1er juillet 2026, cette conformité devient obligatoire.</p>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-icon">⚠️</div>
+      <div class="alert-text">
+        <strong>Chantiers programmés pour le 2e semestre 2026 : le délai est maintenant</strong>
+        <span>Un repérage non conforme expose le donneur d'ordre à un blocage de chantier, des sanctions de l'inspection du travail et une responsabilité civile directe.</span>
+      </div>
+    </div>
+
+    <div class="reg-grid">
+      <div class="reg-card">
+        <img src="images/icone-concerne.webp" alt="" class="reg-icon">
+        <div class="reg-num">01</div>
+        <h3>Qui est concerné ?</h3>
+        <p>Tous les donneurs d'ordre, maîtres d'ouvrage et propriétaires qui programment des travaux sur de la voirie, des ouvrages d'art, des ponts, tunnels ou tout ouvrage de génie civil.</p>
+      </div>
+      <div class="reg-card">
+        <img src="images/icone-loi.webp" alt="" class="reg-icon">
+        <div class="reg-num">02</div>
+        <h3>Ce qu'impose la norme</h3>
+        <p>Le repérage doit être réalisé par un opérateur titulaire d'une certification spécifique. Les rapports doivent être conformes à l'annexe F de la norme et exploitables dans les marchés publics.</p>
+      </div>
+      <div class="reg-card">
+        <img src="images/icone-risques.webp" alt="" class="reg-icon">
+        <div class="reg-num">03</div>
+        <h3>Les risques en cas de non-conformité</h3>
+        <p>Arrêt de chantier, sanctions de l'inspection du travail, responsabilité civile du donneur d'ordre et exposition des travailleurs à l'amiante sans protection adaptée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     RÉFÉRENCES
+============================================= -->
+<section class="references" id="references">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Références</div>
+      <h2>Ils nous font confiance</h2>
+      <p>Collectivités, entreprises de travaux publics et gestionnaires d'infrastructures nous confient leurs missions de repérage.</p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <!-- Série 1 -->
+        <div class="logo-item">
+          <img src="images/logo-advice-ingenierie.webp" alt="Advice Ingénierie">
+          <span class="logo-item-name">Advice Ingénierie</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-eurovia.webp" alt="Eurovia">
+          <span class="logo-item-name">Eurovia</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-ingerop.webp" alt="Ingérop">
+          <span class="logo-item-name">Ingérop</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-sade.webp" alt="SADE">
+          <span class="logo-item-name">SADE</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-tisseo.webp" alt="Tisséo">
+          <span class="logo-item-name">Tisséo</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-toulouse-metropole.webp" alt="Toulouse Métropole">
+          <span class="logo-item-name">Toulouse Métropole</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-vinci-autoroute-asf.webp" alt="Vinci Autoroutes ASF">
+          <span class="logo-item-name">Vinci Autoroutes ASF</span>
+        </div>
+        <!-- Série 2 — doublon pour la boucle infinie -->
+        <div class="logo-item">
+          <img src="images/logo-advice-ingenierie.webp" alt="Advice Ingénierie">
+          <span class="logo-item-name">Advice Ingénierie</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-eurovia.webp" alt="Eurovia">
+          <span class="logo-item-name">Eurovia</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-ingerop.webp" alt="Ingérop">
+          <span class="logo-item-name">Ingérop</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-sade.webp" alt="SADE">
+          <span class="logo-item-name">SADE</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-tisseo.webp" alt="Tisséo">
+          <span class="logo-item-name">Tisséo</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-toulouse-metropole.webp" alt="Toulouse Métropole">
+          <span class="logo-item-name">Toulouse Métropole</span>
+        </div>
+        <div class="logo-item">
+          <img src="images/logo-vinci-autoroute-asf.webp" alt="Vinci Autoroutes ASF">
+          <span class="logo-item-name">Vinci Autoroutes ASF</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners-block">
+      <h3>Laboratoires partenaires accrédités</h3>
+      <div class="partners-row">
+        <a href="https://www.eurofins.fr/environnement/" target="_blank" rel="noopener" class="partner-logo-link">
+          <img src="images/logo-laboratoire-eurofins.webp" alt="Eurofins Environnement">
+        </a>
+        <a href="https://www.geos-laboratories.fr/" target="_blank" rel="noopener" class="partner-logo-link">
+          <img src="images/logo-laboratoire-geos.webp" alt="GEOS Laboratoire">
+        </a>
+        <a href="https://www.sgs.com/fr-fr" target="_blank" rel="noopener" class="partner-logo-link">
+          <img src="images/logo-laboratoire-sgs.webp" alt="SGS">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDEAU PHOTO — entre Références et Expertise -->
+<div class="photo-banner"><img src="images/pont-aquitaine-tempodiag-reperage-amiante-nfx-46-102.webp" alt="Pont Aquitaine — Tempodiag repérage amiante NFX 46-102"></div>
+
+<!-- =============================================
+     ENGAGEMENTS
+============================================= -->
+<div class="engagements">
+  <div class="container" style="text-align:center;">
+    <div class="eng-title" style="font-size:22px; margin-bottom:10px;">Mobilisation sur des missions courtes</div>
+    <p class="eng-desc" style="font-size:15px; max-width:560px; margin:0 auto;">Tempodiag préconise des interventions courtes (moins de 7 jours) afin de privilégier la réactivité pour ne jamais bloquer vos plannings de chantier.</p>
+  </div>
+</div>
+
+<!-- =============================================
+     EXPERTISE / CAS CONCRETS
+============================================= -->
+<section class="expertise">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Notre expertise</div>
+      <h2>Exemples de missions réalisées</h2>
+      <p>Des ouvrages complexes, des contextes variés, des rapports livrés dans les délais. Les photos ne représentent pas le chantier.</p>
+    </div>
+
+    <div class="expertise-grid">
+
+      <!-- MISSION 1 -->
+      <div class="exp-card">
+        <div class="exp-img-wrap">
+          <img src="images/mission-1-retenues-rocade-toulouse.webp" alt="Mise en place de retenues sur la rocade de Toulouse">
+        </div>
+        <div class="exp-head">
+          <div class="exp-type">Voirie | Infrastructure routière</div>
+          <div class="exp-title">Mise en place de retenues sur la rocade de Toulouse</div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-desc">Repérage amiante NFX 46-102 préalable à la mise en place de retenues sur la rocade toulousaine. Mission réalisée pour le compte d'Ingérop.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Ingérop</span>
+            <span class="exp-tag">Haute-Garonne (31)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISSION 2 -->
+      <div class="exp-card">
+        <div class="exp-img-wrap">
+          <img src="images/mission-2-etancheite-ouvrages-art-vinci.webp" alt="Reprise d'étanchéité sur ouvrages d'art Vinci ASF">
+        </div>
+        <div class="exp-head">
+          <div class="exp-type">Ouvrage d'art</div>
+          <div class="exp-title">Reprise d'étanchéité sur ouvrages d'art pour Vinci ASF</div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-desc">Repérage amiante avant travaux de reprise d'étanchéité sur ouvrages d'art du réseau autoroutier concédé à Vinci ASF.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Vinci ASF</span>
+            <span class="exp-tag">Gironde (33)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISSION 3 -->
+      <div class="exp-card">
+        <div class="exp-img-wrap">
+          <img src="images/mission-3-recherche-amiante-enrobes-routiers.webp" alt="Recherche d'amiante sur enrobés routiers">
+        </div>
+        <div class="exp-head">
+          <div class="exp-type">Voirie | Enrobés routiers</div>
+          <div class="exp-title">Recherche d'amiante sur enrobés routiers</div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-desc">Campagnes de recherche d'amiante sur enrobés routiers réalisées pour plusieurs donneurs d'ordre, sur différents sites en France.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Multi-donneurs d'ordre</span>
+            <span class="exp-tag">Plusieurs sites</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISSION 4 -->
+      <div class="exp-card">
+        <div class="exp-img-wrap">
+          <img src="images/mission-4-etancheite-chateaux-eau-canalisations.webp" alt="Repérage amiante châteaux d'eau et canalisations">
+        </div>
+        <div class="exp-head">
+          <div class="exp-type">Génie civil / Hydraulique</div>
+          <div class="exp-title">Repérage amiante : châteaux d'eau et canalisations</div>
+        </div>
+        <div class="exp-body">
+          <p class="exp-desc">Repérage amiante sur l'étanchéité des châteaux d'eau et reprise des canalisations, conduit pour Advice Ingénierie sur plusieurs sites.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Advice Ingénierie</span>
+            <span class="exp-tag">Plusieurs sites</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CTA / FORMULAIRE + CALENDLY
+============================================= -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="section-tag">Prise de contact</div>
+    <h2>Parlons de vos besoins</h2>
+    <p>Décrivez-nous votre besoin en quelques mots  et planifiez un rendez-vous visio avec notre équipe. </p>
+
+    <!-- CALENDLY -->
+    <div class="calendly-block">
+      <h3>Planifier un rendez-vous visio</h3>
+      <p>Choisissez un créneau disponible dans l'agenda de notre équipe.<br>L'entretien dure 20 minutes, sans engagement.</p>
+      <!-- Début de widget en ligne Calendly -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/r-salmon-tempodiag/20min?hide_gdpr_banner=1&primary_color=27b9c2&background_color=0D3B4D&text_color=ffffff" style="min-width:320px;width:100%;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Fin de widget en ligne Calendly -->
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo"><img src="images/logo-tempodiag.png" alt="Tempodiag" style="height:36px;display:block;"></div>
+    <div class="footer-info">
+      Rue de la Forge 33910 Saint Denis de Pile | 06 95 57 63 37<br>
+      r.salmon@tempodiag.fr | Certifié NFX 46-102
+    </div>
+    <div class="footer-legal">
+      SIRET : 849 896 972 00023<br>
+      <a href="#" id="open-ml" onclick="document.getElementById('modal-ml').classList.add('is-open');return false;">Mentions légales</a> · <a href="#" id="open-pc" onclick="document.getElementById('modal-pc').classList.add('is-open');return false;">Politique de confidentialité</a>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(255,255,255,0.06); padding: 12px 24px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.25);">
+    Copyright&copy; 2026 | <a href="https://www.appalga.com/agence-communication-bordeaux.html" target="_blank" style="color:inherit; text-decoration:none;">Agence de communication Appalga</a>
+  </div>
+</footer>
+
+
+<!-- =============================================
+     MODALE MENTIONS LÉGALES
+============================================= -->
+<div class="modal-overlay" id="modal-ml" role="dialog" aria-modal="true" aria-labelledby="ml-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="ml-title">Mentions légales</h2>
+      <button class="modal-close" id="close-ml" aria-label="Fermer">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., il est porté à la connaissance des utilisateurs et visiteurs du site les présentes mentions légales.</p>
+      <p>Le site est accessible à l'adresse suivante : à définir (ci-après "le Site"). L'accès et l'utilisation du Site sont soumis aux présentes "Mentions légales" détaillées ci-après ainsi qu'aux lois et/ou règlements applicables.</p>
+      <p>La connexion, l'utilisation et l'accès à ce Site impliquent l'acceptation intégrale et sans réserve de l'internaute de toutes les dispositions des présentes Mentions Légales.</p>
+
+      <h3>Article 1 — Informations légales</h3>
+      <p>En vertu de l'Article 6 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé dans cet article l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+
+      <p><strong>Directeur de publication</strong><br>
+      Nom ou Raison sociale : à définir<br>
+      Adresse : à définir<br>
+      Adresse électronique : à définir<br>
+      N° Registre Commerce : à définir<br>
+      N° SIRET de l'établissement : à définir</p>
+
+      <p><strong>Éditeur du site</strong><br>
+      Le site est édité par : Appalga — <a href="https://www.appalga.com" target="_blank" rel="noopener">www.appalga.com</a><br>
+      Nom ou Raison sociale : APPALGA<br>
+      Adresse : 11 Rue Nuyens 33100 Bordeaux<br>
+      Adresse électronique : contact@appalga.com<br>
+      Téléphone : 05 56 68 37 12<br>
+      N° Registre Commerce : 812 574 655<br>
+      N° SIRET de l'établissement : 81257465500013<br>
+      N° d'assujettissement à la TVA : FR02812574655</p>
+
+      <p><strong>Hébergeur du site</strong><br>
+      Le site est hébergé par : Elestio — <a href="https://elest.io/" target="_blank" rel="noopener">https://elest.io/</a></p>
+
+      <p><strong>Utilisateurs</strong><br>
+      Sont considérés comme utilisateurs tous les internautes qui naviguent, lisent, visionnent et utilisent le site.</p>
+
+      <h3>Article 2 — Accessibilité</h3>
+      <p>Le Site est par principe accessible aux Utilisateurs 24h/24 et 7j/7, sauf interruption, programmée ou non, pour des besoins de maintenance ou en cas de force majeure. En cas d'impossibilité d'accès au Site, celui-ci s'engage à faire son maximum afin d'en rétablir l'accès. Le Site ne saurait être tenu pour responsable de tout dommage, quelle qu'en soit la nature, résultant de son indisponibilité.</p>
+
+      <h3>Article 3 — Loi applicable et juridiction</h3>
+      <p>Les présentes Mentions Légales sont régies par la loi française. En cas de différend et à défaut d'accord amiable, le litige sera porté devant les tribunaux français conformément aux règles de compétence en vigueur.</p>
+
+      <h3>Article 4 — Contact</h3>
+      <p>Pour tout signalement de contenus ou d'activités illicites, l'Utilisateur peut contacter l'Éditeur à l'adresse suivante : <a href="mailto:contact@appalga.com">contact@appalga.com</a>, ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales.</p>
+
+      <h3>Article 5 — Protection des droits de propriété intellectuelle</h3>
+      <p>Le Site Web et chacun des éléments qui le compose, et notamment les textes, articles, lettres d'informations, communiqués, présentations, brochures, illustrations, photographies, programmes informatiques, animations, etc., sont notre propriété intellectuelle exclusive à l'exception des marques de tiers qui pourraient être citées.</p>
+      <p>L'Utilisateur n'est pas autorisé à reproduire, représenter, modifier, traduire et/ou adapter, partiellement ou totalement, à titre onéreux ou gratuit, le Site Web et chacun des éléments qui le compose, ni reproduire ou représenter de telles traductions, adaptations et modifications, partiellement ou totalement, à titre onéreux ou gratuit, sans notre accord préalable écrit.</p>
+      <p>Toute courte citation devra faire apparaître le nom de son auteur et, le cas échéant, la date et le numéro de publication du document cité.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     MODALE POLITIQUE DE CONFIDENTIALITÉ
+============================================= -->
+<div class="modal-overlay" id="modal-pc" role="dialog" aria-modal="true" aria-labelledby="pc-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="pc-title">Politique de confidentialité</h2>
+      <button class="modal-close" id="close-pc" aria-label="Fermer">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <p>Nous attachons une importance toute particulière à la protection de vos données personnelles.</p>
+      <p>La présente Politique de confidentialité a vocation à détailler de manière transparente la manière dont nous recueillons, stockons, utilisons et divulguons vos données personnelles lorsque vous utilisez le site Internet (le « Site ») et/ou que vous souhaitez obtenir des services ou informations proposés sur le Site (les « Services »).</p>
+      <p>En utilisant le « Site » vous acceptez la présente Politique de confidentialité.</p>
+
+      <h3>A — Les données personnelles que vous communiquez</h3>
+      <p>Il n'est pas impératif de transmettre des données personnelles pour consulter le Site. Nous ne collectons que les données strictement nécessaires à la mise en œuvre des Services. Afin de pouvoir bénéficier de nos services proposés, certaines pages du Site, il est nécessaire de procéder à une rapide inscription impliquant la communication de votre nom, votre prénom et de votre adresse mail.</p>
+      <p>Si vous utilisez le Formulaire de Contact vous permettant de transmettre des demandes, vous devez éviter de transmettre des informations confidentielles.</p>
+
+      <h3>B — Finalités de la collecte des données</h3>
+      <p>Les données personnelles collectées sur le Site sont principalement traitées pour les finalités suivantes :</p>
+      <p>Traitement de vos demandes via le Site ; Analyse et suivi du trafic sur le Site ; Amélioration du contenu et de la navigabilité du Site.</p>
+
+      <h3>C — Partage et transfert des données</h3>
+      <p>Les données collectées nous sont uniquement destinées. En aucun cas nous ne cédons, vendons ou louons les données collectées à des tiers, que ce soit à titre onéreux ou gratuit.</p>
+      <p>Par ailleurs, dans les cas où la loi l'y oblige ou l'y autorise, notamment du fait d'une décision de justice ou de toute autre demande ou exigence légale, nous pourrons être amenés à divulguer ces données à des tiers.</p>
+      <p>Le Site est hébergé sur des serveurs du cloud AWS.</p>
+
+      <h3>D — Cookies</h3>
+      <p><strong>Dispositions générales sur les cookies et la collecte automatisée de vos données personnelles</strong></p>
+      <p>Lors de votre navigation sur le Site, nous sommes susceptibles de recueillir, conformément à la législation applicable et avec votre accord préalable lorsqu'il est requis, des informations relatives à vos terminaux ou aux réseaux depuis lesquels vous accédez au Site, tels que notamment : adresses IP, données de connexion, types et versions de navigateurs internet utilisés, types et versions des plugins de votre navigateur, systèmes et plateformes d'exploitation, données concernant votre parcours de navigation sur le Site, les contenus que vous consultez, les termes de recherches utilisés, la durée de consultation de certaines pages, les interactions avec la page ainsi que tout numéro de téléphone utilisé pour nous contacter.</p>
+      <p>Parmi les technologies utilisées pour recueillir ces informations, nous avons notamment recours aux cookies, qui sont des petits fichiers de lettres et de chiffres téléchargés sur votre terminal lorsque vous accédez au Site.</p>
+      <p><strong>Présentation des cookies utilisés</strong></p>
+      <p>Ces cookies peuvent être de différentes natures :</p>
+      <p><strong>Les cookies de fonctionnalités et les cookies nécessaires au fonctionnement du Site :</strong> ils sont nécessaires au bon fonctionnement du Site ainsi que pour accéder à ses fonctionnalités destinées à assurer votre confort de navigation.</p>
+      <p><strong>Les cookies analytiques :</strong> la finalité est de connaître la fréquentation, l'utilisation et les performances du Site, et d'en améliorer le fonctionnement et l'ergonomie. Nous utilisons Google Analytics et Google Search Console.</p>
+      <p><strong>Gestion des cookies</strong></p>
+      <p>Sauf décision de votre part de désactiver les cookies selon la procédure décrite ci-dessous, le fait de poursuivre la navigation sur le Site vaut consentement à l'utilisation des cookies.</p>
+      <p>Vous pouvez désactiver à tout moment et gratuitement l'utilisation des cookies en sélectionnant les paramètres appropriés de votre navigateur. Les étapes à suivre étant différentes pour chaque navigateur, vous pouvez trouver des instructions dans le menu « Aide » de votre navigateur, dans la rubrique « Vos traces » du site <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+      <p>Cependant, nous vous informons qu'une telle désactivation pourrait empêcher l'utilisation de certaines fonctionnalités du Site.</p>
+      <p><strong>Conservation des cookies</strong></p>
+      <p>Les informations stockées au titre des cookies analytiques ne seront pas conservées au-delà de treize mois. Les cookies de fonctionnalités ou de session disparaissent dès que vous quittez notre site.</p>
+      <p>Vous pouvez paramétrer le blocage des cookies dans les préférences de votre navigateur :<br>
+      <a href="https://windows.microsoft.com/fr-FR/windows-vista/Block-or-allow-cookies" target="_blank" rel="noopener">Internet Explorer</a> ·
+      <a href="https://support.apple.com/fr-fr/ht1677" target="_blank" rel="noopener">Safari</a> ·
+      <a href="https://support.google.com/chrome/answer/95647?hl=fr" target="_blank" rel="noopener">Google Chrome</a> ·
+      <a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank" rel="noopener">Firefox</a> ·
+      <a href="https://help.opera.com/Windows/10.20/fr/cookies.html" target="_blank" rel="noopener">Opera</a></p>
+
+      <h3>E — Durée de conservation des données personnelles</h3>
+      <p>Nous conservons ces données personnelles pour la durée strictement nécessaire à l'accomplissement des Services et plus généralement des finalités précitées. Passé ce délai, nous archivons les données personnelles nécessaires à l'exercice d'un droit et à la preuve de ce droit, pour la durée des délais de prescription applicables ou en vertu des obligations légales auxquelles il est soumis.</p>
+
+      <h3>F — Sécurité</h3>
+      <p>Nous avons mis en place des mesures de sécurité physiques et logiques pour la protection des données personnelles.</p>
+
+      <h3>G — Vos droits</h3>
+      <p>Conformément aux articles 15 à 22 du Règlement Général sur la Protection des Données du 27 avril 2016 (RGPD), toute personne physique concernée justifiant de son identité bénéficie d'un droit d'accès, de rectification, d'effacement, d'opposition, à la portabilité des données personnelles la concernant et à la limitation des traitements ainsi qu'au sort de ces mêmes données après la mort. Ces droits peuvent être exercés en s'adressant à : à définir.</p>
+      <p>Toute personne dont les données personnelles ont été collectées dispose de la faculté de saisir la <a href="https://www.cnil.fr/fr/vous-souhaitez-contacter-la-cnil" target="_blank" rel="noopener">Commission nationale de l'Informatique et des Libertés (CNIL)</a> dans l'hypothèse où nous n'aurions pas fait suite à une demande dans le délai d'un mois suivant cette demande.</p>
+      <p>Si vous ne souhaitez plus recevoir de communication de notre part ou que vos données soient supprimées, veuillez envoyer un courrier électronique à l'adresse : à définir.</p>
+
+      <h3>H — Liens vers des sites internet tiers</h3>
+      <p>Le Site peut contenir des liens vers des sites internet de tiers, régis par leurs propres politiques de confidentialité. Nous ne pouvons être tenus responsables du contenu et des pratiques de ces sites internet. Il vous est recommandé de consulter leur politique de confidentialité avant de leur transmettre toute information vous concernant.</p>
+
+      <h3>I — Modification de la Politique de confidentialité</h3>
+      <p>Il est possible que nous soyons amenés à modifier les dispositions de la présente Politique de confidentialité en fonction des évolutions légales et réglementaires. En continuant à utiliser le Site après cette date, vous acceptez les modifications effectuées.</p>
+
+      <h3>J — Contact</h3>
+      <p>Pour toute information relative à la présente Politique de confidentialité, vous pouvez nous contacter à l'adresse suivante : à définir.</p>
+
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Parallax bandeau photo ── */
+(function () {
+  var banner = document.querySelector('.photo-banner');
+  var img    = banner ? banner.querySelector('img') : null;
+  if (!banner || !img) return;
+  function tick() {
+    var rect     = banner.getBoundingClientRect();
+    var viewH    = window.innerHeight;
+    var progress = (viewH - rect.top) / (viewH + rect.height);
+    var shift    = (progress - 0.5) * 100; /* plage ±50 px */
+    img.style.transform = 'translateY(' + shift + 'px)';
+  }
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+})();
+
+/* ── Typewriter stat-typewriter ── */
+(function () {
+  function typewrite(el) {
+    var text = el.textContent.trim();
+    el.textContent = '';
+    var i = 0;
+    (function next() {
+      if (i < text.length) {
+        el.textContent += text[i++];
+        setTimeout(next, 90);
+      } else {
+        el.classList.add('done');
+      }
+    })();
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { typewrite(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-typewriter').forEach(function (el) { io.observe(el); });
+})();
+
+/* ── Compteur animé stat-num ── */
+(function () {
+  function animate(el) {
+    var raw = el.textContent.trim();
+    if (!raw || raw.indexOf('NB') !== -1) return;
+    var num    = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    if (isNaN(num)) return;
+    var suffix = raw.replace(/[0-9.]/g, '');
+    var dur    = 1800;
+    var t0     = performance.now();
+    el.textContent = '0' + suffix;
+    (function step(now) {
+      var p  = Math.min((now - t0) / dur, 1);
+      var ep = 1 - Math.pow(1 - p, 3); /* ease-out cubic */
+      el.textContent = Math.round(ep * num) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-num').forEach(function (el) {
+    var raw = el.textContent.trim();
+    if (raw && raw.indexOf('NB') === -1) io.observe(el);
+  });
+})();
+
+/* ── Modales génériques ── */
+(function () {
+  function initModal(overlayId, closeId) {
+    var overlay = document.getElementById(overlayId);
+    var btnClose = document.getElementById(closeId);
+    function close() { overlay.classList.remove('is-open'); }
+    btnClose.addEventListener('click', close);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+  initModal('modal-ml', 'close-ml');
+  initModal('modal-pc', 'close-pc');
+})();
+</script>
+</body>
+</html>
